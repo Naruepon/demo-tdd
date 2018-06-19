@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class DiviOperation {
 
 	public double calculateDiv(int i, int j) throws DivideOperationException {

@@ -13,17 +13,21 @@ public class AddControllerUnitTest {
 	
 	@Mock
 	private addOperation addOperation;
+	@Mock
 	private DiviOperation divOperarion;
-	private AddController controller;
+	
+	private AddController controller = new AddController();
 	
 	@Before
 	public void initial(){
 		initMocks(this);
+		controller.setOperation(divOperarion);
 	}
 	
 	@Test
 	public void test() throws DivideOperationException {	
 		given(divOperarion.calculateDiv(8, 2)).willReturn(4.0);	
+	
 		String result = controller.add(8, 2);
 		assertEquals("4.0", result);
 	}

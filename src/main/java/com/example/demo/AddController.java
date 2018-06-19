@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AddController {
-	public DiviOperation getOperation() {
-		return operation;
-	}
+	
 
 	@Autowired
 	DiviOperation operation;
+	
 	addOperation operation02;
 	
 	@GetMapping("/add/{i01}/{i02}")
@@ -20,7 +19,6 @@ public class AddController {
 //		addOperation operation = new addOperation();
 		
 		double result = operation.calculateDiv(i01, i02);
-//		double result = operation02.caculate(i01, i02);
 		System.out.println(" result : " + result);
 		return String.valueOf(result);
 

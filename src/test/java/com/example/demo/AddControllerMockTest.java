@@ -18,6 +18,7 @@ public class AddControllerMockTest {
 	
 	@MockBean
 	private addOperation addoperation;
+	@MockBean
 	private DiviOperation dividOperation;
 	
 	@Autowired
